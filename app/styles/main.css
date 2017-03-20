@@ -11,6 +11,11 @@ body {
   padding-bottom: 20px;
 }
 
+header {
+  background-color: #eee;
+  min-height: 50px;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -40,9 +45,9 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .container {
-    max-width: 730px;
+    width: 100% !important;
   }
 }
 .container-narrow > hr {
@@ -84,4 +89,42 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #337ab7;
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.active {
+  background-color: #337ab7;
+}
+
+.active > a {
+  color: #eee;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.active > a:hover {
+  color: #fff !important;
+  background-color: #337ab7 !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}
+
+.progress {
+  height: 3px;
+}
+
+.progress-bar {
+  width: 0%;
+  transition: width .1s ease !important;
 }
