@@ -126,5 +126,5 @@ header {
 
 .progress-bar {
   width: 0%;
-  transition: width .1s ease !important;
+  transition: none !important;
 }

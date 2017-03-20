@@ -4,7 +4,7 @@
 var app = {};
 
 /**
- * Iteration of the progress bar from 0 to 30
+ * Iteration of the progress bar
  */
 app.progressValue = 0;
 
@@ -51,7 +51,7 @@ app.deselectAll = function () {
 app.resetProgressBar = function () {
   app.progressValue = 0;
   $('.progress-bar').css('width', '0%');
-  setTimeout('app.runProgressBar()', 100);
+  setTimeout('app.runProgressBar()', 10);
 };
 
 
@@ -59,13 +59,13 @@ app.resetProgressBar = function () {
  * Starts progress bar 3-second loading
  */
 app.runProgressBar = function () {
-  if (app.progressValue < 30) {
+  if (app.progressValue < 300) {
     app.progressValue +=1;
-    $('.progress-bar').css('width', (app.progressValue * 10 / 3) + '%');
+    $('.progress-bar').css('width', app.progressValue + '%');
 
-    // 3000 ms / 100 ms iteration = 30 iterations
-    setTimeout('app.runProgressBar()', 100);
-  } else if (app.progressValue >= 30) {
+    // 3000 ms / 10 ms iteration = 300 iterations
+    setTimeout('app.runProgressBar()', 10);
+} else if (app.progressValue >= 300) {
     app.updateContent();
   }
 };
